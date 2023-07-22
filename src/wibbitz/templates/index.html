@@ -47,8 +47,9 @@
                 <section class="content">
                     <h1>The quickest and easiest online video editor for every team</h1>
                     <p>Wibbitz gives you the freedom to create short form video online in minutes – no experience necessary.</p>
-                    <form action="">
-                        <input type="email" placeholder="Enter your work email" />
+                    <form class="ajax" action="{% url 'web:subscribe' %}" method="post">
+                        {% csrf_token %}
+                        <input type="email" name="email" placeholder="Enter your work email" />
                         <button type="submit">Get a Demo</button>
                     </form>
                 </section>
