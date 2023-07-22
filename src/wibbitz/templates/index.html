@@ -66,14 +66,9 @@
             <section class="wrapper">
                 <p>Trusted by content creators across the world</p>
                 <ul>
-                    <li><a href="#"><img src="{% static 'images/logo-reuters.svg' %}" alt="" /></a></li>
-                    <li><a href="#"><img src="{% static 'images/logo-taboola.svg' %}" alt="" /></a></li>
-                    <li><a href="#"><img src="{% static 'images/logo-bloomberg.svg' %}" alt="" /></a></li>
-                    <li><a href="#"><img src="{% static 'images/logo-nbc.svg' %}" alt="" /></a></li>
-                    <li><a href="#"><img src="{% static 'images/logo-birchbox.svg' %}" alt="" /></a></li>
-                    <li><a href="#"><img src="{% static 'images/USA-Today-logo_24.svg' %}" alt="" /></a></li>
-                    <li><a href="#"><img src="{% static 'images/logo-hubspot.svg' %}" alt="" /></a></li>
-                    <li><a href="#"><img src="{% static 'images/logo-tmz.svg' %}" alt="" /></a></li>
+                    {% for customer in customers %}
+                    <li><a href="#"><img src="{{customer.image.url}}" alt="" /></a></li>
+                    {% endfor %}
                 </ul>
             </section>
         </section>
